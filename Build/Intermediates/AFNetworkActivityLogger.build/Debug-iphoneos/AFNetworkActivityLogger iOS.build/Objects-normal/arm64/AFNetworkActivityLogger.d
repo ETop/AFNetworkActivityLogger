@@ -1,0 +1,23 @@
+dependencies: \
+  /Users/zhongyuanke/code/AFNetworkActivityLogger/AFNetworkActivityLogger/AFNetworkActivityLogger.m \
+  /Users/zhongyuanke/code/AFNetworkActivityLogger/AFNetworkActivityLogger/AFNetworkActivityLogger.h \
+  /Users/zhongyuanke/code/AFNetworkActivityLogger/AFNetworkActivityLogger/AFNetworkActivityLoggerProtocol.h \
+  /Users/zhongyuanke/code/AFNetworkActivityLogger/Carthage/Build/iOS/AFNetworking.framework/Modules/module.modulemap \
+  /Users/zhongyuanke/code/AFNetworkActivityLogger/Carthage/Build/iOS/AFNetworking.framework/Headers/UIWebView+AFNetworking.h \
+  /Users/zhongyuanke/code/AFNetworkActivityLogger/Carthage/Build/iOS/AFNetworking.framework/Headers/UIRefreshControl+AFNetworking.h \
+  /Users/zhongyuanke/code/AFNetworkActivityLogger/Carthage/Build/iOS/AFNetworking.framework/Headers/AFNetworkActivityIndicatorManager.h \
+  /Users/zhongyuanke/code/AFNetworkActivityLogger/Carthage/Build/iOS/AFNetworking.framework/Headers/UIProgressView+AFNetworking.h \
+  /Users/zhongyuanke/code/AFNetworkActivityLogger/Carthage/Build/iOS/AFNetworking.framework/Headers/UIImageView+AFNetworking.h \
+  /Users/zhongyuanke/code/AFNetworkActivityLogger/Carthage/Build/iOS/AFNetworking.framework/Headers/UIImage+AFNetworking.h \
+  /Users/zhongyuanke/code/AFNetworkActivityLogger/Carthage/Build/iOS/AFNetworking.framework/Headers/UIButton+AFNetworking.h \
+  /Users/zhongyuanke/code/AFNetworkActivityLogger/Carthage/Build/iOS/AFNetworking.framework/Headers/UIActivityIndicatorView+AFNetworking.h \
+  /Users/zhongyuanke/code/AFNetworkActivityLogger/Carthage/Build/iOS/AFNetworking.framework/Headers/AFImageDownloader.h \
+  /Users/zhongyuanke/code/AFNetworkActivityLogger/Carthage/Build/iOS/AFNetworking.framework/Headers/AFAutoPurgingImageCache.h \
+  /Users/zhongyuanke/code/AFNetworkActivityLogger/Carthage/Build/iOS/AFNetworking.framework/Headers/AFHTTPSessionManager.h \
+  /Users/zhongyuanke/code/AFNetworkActivityLogger/Carthage/Build/iOS/AFNetworking.framework/Headers/AFURLSessionManager.h \
+  /Users/zhongyuanke/code/AFNetworkActivityLogger/Carthage/Build/iOS/AFNetworking.framework/Headers/AFNetworkReachabilityManager.h \
+  /Users/zhongyuanke/code/AFNetworkActivityLogger/Carthage/Build/iOS/AFNetworking.framework/Headers/AFSecurityPolicy.h \
+  /Users/zhongyuanke/code/AFNetworkActivityLogger/Carthage/Build/iOS/AFNetworking.framework/Headers/AFURLResponseSerialization.h \
+  /Users/zhongyuanke/code/AFNetworkActivityLogger/Carthage/Build/iOS/AFNetworking.framework/Headers/AFURLRequestSerialization.h \
+  /Users/zhongyuanke/code/AFNetworkActivityLogger/Carthage/Build/iOS/AFNetworking.framework/Headers/AFNetworking.h \
+  /Users/zhongyuanke/code/AFNetworkActivityLogger/AFNetworkActivityLogger/AFNetworkActivityConsoleLogger.h

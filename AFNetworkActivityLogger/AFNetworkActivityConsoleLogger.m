@@ -23,7 +23,7 @@
 #import "AFNetworkActivityConsoleLogger.h"
 
 #ifdef DEBUG
-#define NSLog(format, ...) printf("函数名:%s \n %s\n\n", __PRETTY_FUNCTION__, [[NSString stringWithFormat:(format), ##__VA_ARGS__] UTF8String])
+#define NLog(format, ...) printf("函数名:%s \n %s\n\n", __PRETTY_FUNCTION__, [[NSString stringWithFormat:(format), ##__VA_ARGS__] UTF8String])
 #else
 # define NLog(...);
 #endif
