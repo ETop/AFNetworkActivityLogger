@@ -63,6 +63,7 @@ static NSError * AFNetworkErrorFromNotification(NSNotification *notification) {
     self.mutableLoggers = [NSMutableSet set];
 
     AFNetworkActivityConsoleLogger *consoleLogger = [AFNetworkActivityConsoleLogger new];
+    consoleLogger.level = AFLoggerLevelDebug;
     [self addLogger:consoleLogger];
 
     return self;
@@ -130,6 +131,7 @@ static void * AFNetworkRequestStartDate = &AFNetworkRequestStartDate;
     id responseObject = nil;
     if (notification.userInfo) {
         responseObject = notification.userInfo[AFNetworkingTaskDidCompleteSerializedResponseKey];
+        responseObject = [NSJSONSerialization JSONObjectWithData:responseObject options:kNilOptions error:&error];
     }
 
     NSTimeInterval elapsedTime = [[NSDate date] timeIntervalSinceDate:objc_getAssociatedObject(notification.object, AFNetworkRequestStartDate)];
