@@ -1,0 +1,43 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [
+    {
+      'type': 'directory',
+      'name': "/Users/zhongyuanke/code/AFNetworkActivityLogger/Build/Products/Debug-iphoneos/AFNetworkActivityLogger.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "AFNetworkActivityConsoleLogger.h",
+          'external-contents': "/Users/zhongyuanke/code/AFNetworkActivityLogger/AFNetworkActivityLogger/AFNetworkActivityConsoleLogger.h"
+        },
+        {
+          'type': 'file',
+          'name': "AFNetworkActivityLogger-Swift.h",
+          'external-contents': "/Users/zhongyuanke/code/AFNetworkActivityLogger/Build/Products/Debug-iphoneos/AFNetworkActivityLogger.framework/Headers/AFNetworkActivityLogger-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "AFNetworkActivityLogger.h",
+          'external-contents': "/Users/zhongyuanke/code/AFNetworkActivityLogger/AFNetworkActivityLogger/AFNetworkActivityLogger.h"
+        },
+        {
+          'type': 'file',
+          'name': "AFNetworkActivityLoggerProtocol.h",
+          'external-contents': "/Users/zhongyuanke/code/AFNetworkActivityLogger/AFNetworkActivityLogger/AFNetworkActivityLoggerProtocol.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/zhongyuanke/code/AFNetworkActivityLogger/Build/Products/Debug-iphoneos/AFNetworkActivityLogger.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/zhongyuanke/code/AFNetworkActivityLogger/Build/Intermediates/AFNetworkActivityLogger.build/Debug-iphoneos/AFNetworkActivityLogger iOS.build/module.modulemap"
+        }
+      ]
+    }
+  ]
+}
