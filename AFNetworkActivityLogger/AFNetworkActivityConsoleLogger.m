@@ -22,6 +22,12 @@
 
 #import "AFNetworkActivityConsoleLogger.h"
 
+#ifdef DEBUG
+# define NLog(fmt, ...) NSLog((@"[文件名:%s]\n" "[函数名:%s]\n" "[行号:%d] \n" fmt), __FILE__, __FUNCTION__, __LINE__, ##__VA_ARGS__);
+#else
+# define NLog(...);
+#endif
+
 @implementation AFNetworkActivityConsoleLogger
 
 - (id)init {
@@ -29,27 +35,31 @@
     if (!self) {
         return nil;
     }
-
+    
     self.level = AFLoggerLevelInfo;
-
+    
     return self;
 }
 
 
 - (void)URLSessionTaskDidStart:(NSURLSessionTask *)task {
     NSURLRequest *request = task.originalRequest;
-
+    
     NSString *body = nil;
     if ([request HTTPBody]) {
         body = [[NSString alloc] initWithData:[request HTTPBody] encoding:NSUTF8StringEncoding];
     }
-
+    
     switch (self.level) {
         case AFLoggerLevelDebug:
-            NSLog(@"%@ '%@': %@ %@", [request HTTPMethod], [[request URL] absoluteString], [request allHTTPHeaderFields], body);
+            
+            NLog(@"%@ '%@': %@ %@", [request HTTPMethod], [[request URL] absoluteString], [request allHTTPHeaderFields], body);
+            NSLog(@"\n\n\n\n\n");
             break;
         case AFLoggerLevelInfo:
-            NSLog(@"%@ '%@'", [request HTTPMethod], [[request URL] absoluteString]);
+            
+            NLog(@"%@ '%@'", [request HTTPMethod], [[request URL] absoluteString]);
+            NSLog(@"\n\n\n\n\n");
             break;
         default:
             break;
@@ -63,23 +73,28 @@
         responseStatusCode = (NSUInteger)[(NSHTTPURLResponse *)task.response statusCode];
         responseHeaderFields = [(NSHTTPURLResponse *)task.response allHeaderFields];
     }
-
+    
     if (error) {
         switch (self.level) {
             case AFLoggerLevelDebug:
             case AFLoggerLevelInfo:
             case AFLoggerLevelError:
-                NSLog(@"[Error] %@ '%@' (%ld) [%.04f s]: %@", [task.originalRequest HTTPMethod], [[task.response URL] absoluteString], (long)responseStatusCode, elapsedTime, error);
+                
+                NLog(@"[Error] %@ '%@' (%ld) [%.04f s]: %@", [task.originalRequest HTTPMethod], [[task.response URL] absoluteString], (long)responseStatusCode, elapsedTime, error);
             default:
                 break;
         }
     } else {
         switch (self.level) {
             case AFLoggerLevelDebug:
-                NSLog(@"%ld '%@' [%.04f s]: %@ %@", (long)responseStatusCode, [[task.response URL] absoluteString], elapsedTime, responseHeaderFields, responseObject);
+                
+                NLog(@"%ld '%@' [%.04f s]: %@ %@", (long)responseStatusCode, [[task.response URL] absoluteString], elapsedTime, responseHeaderFields, responseObject);
+                NSLog(@"\n\n\n\n\n");
                 break;
             case AFLoggerLevelInfo:
-                NSLog(@"%ld '%@' [%.04f s]", (long)responseStatusCode, [[task.response URL] absoluteString], elapsedTime);
+                
+                NLog(@"%ld '%@' [%.04f s]", (long)responseStatusCode, [[task.response URL] absoluteString], elapsedTime);
+                NSLog(@"\n\n\n\n\n");
                 break;
             default:
                 break;
